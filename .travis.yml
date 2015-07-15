@@ -5,4 +5,12 @@ node_js:
 
 branches:
   only:
-    - master
+    - responsive
+
+before_script:
+  - npm install -g grunt-cli
+  - cd utils
+  - npm install .
+
+script:
+  - grunt build
